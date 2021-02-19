@@ -18,8 +18,8 @@ module.exports = async function(deployer, network, accounts) {
 
         await deployer.deploy(CRPFactory);
 
-        await deployer.deploy(BActions, BFactory.address);
-    } else if (network == 'kovan-fork' || network == 'kovan') {
-        deployer.deploy(BActions, '0x8f7F78080219d4066A8036ccD30D588B416a40DB');
+        await deployer.deploy(BActions);
+    } else if (network == 'near_betanet') {
+        deployer.deploy(BActions);
     }
 }
